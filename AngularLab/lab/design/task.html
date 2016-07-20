@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Team Management Tool</title>
+	<link rel="stylesheet" href="../../lib/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/app.css">
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">AMA Team Management</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#"></a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li  class="active"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Start Container... -->  
+    <div class="orders view">
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div>
+                        <h4>Task for <a href="#/customeredit/{{vm.customer.id}}">Shailendra Singh</a></h4>
+                    </div>
+
+                    <table class="table table-hover table-striped table-condensed table-bordered ordersTable">
+                        <thead>
+                            <tr>
+                                <th>Project</th>
+                                <th>Open/ In Progress Jira</th>
+                                <th>completed Jira</th>
+                                <th>Total tickets</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Japan Trial
+                                </td>
+                                <td>
+                                   JT-101, JT-102
+                                </td>
+                                <td>
+                                    JT-103
+                                </td>
+                                <td>
+                                    3
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Life Guard Trial
+                                </td>
+                                <td>
+                                   LGT-101
+                                </td>
+                                <td>
+                                    LGT-103, LGT-102
+                                </td>
+                                <td>
+                                    3
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End Container-->
+<!-- Footer -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Created by : Shailendra Singh</a>
+    </div>
+  </div>
+</nav>
+</body>
+</html>

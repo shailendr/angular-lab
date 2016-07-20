@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Team Management Tool</title>
+	<link rel="stylesheet" href="../../lib/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/app.css">
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">AMA Team Management</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#"></a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li  class="active"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Start Container... -->  
+    <div class="container">
+        <form name="editForm">
+            <div class="memberEdit">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Shailendra  Singh<span>(<a style="font-size:12pt" href="#">View Tasks</a>)</span></h4>
+                        <br />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        First Name:
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" name="firstName" class="form-control" />
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-2">
+                        Last Name:
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" name="lastName" class="form-control" />
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-2">
+                        Gender:
+                    </div>
+                    <div class="col-md-10">
+                        <div class="radio">
+                            <label class="radio">
+                                <input type="radio" name="gender" value="Male" />
+                                Male
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label class="radio">
+                                <input type="radio" name="gender" value="Female"/>
+                                Female
+                                <br />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-2">
+                        Email:
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" name="email" class="form-control"/>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-2">
+                        Address:
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" name="address" class="form-control" />
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-2">
+                        City:
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" name="city" class="form-control" />
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-2">
+                        State:
+                    </div>
+                    <div class="col-md-10">
+                        <select name="state" required class="form-control" >
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-2">
+                        Zip:
+                    </div>
+                    <div class="col-md-10">
+                        <input type="number" name="zip" class="form-control" />
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary" >
+                            Update
+                        </button>
+                        &nbsp;&nbsp;
+                        <button class="btn btn-danger" >Delete</button>
+                    </div>
+                </div>
+                <br />
+            </div>
+        </form>
+    </div>
+
+
+<!-- End Container-->
+<!-- Footer -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Created by : Shailendra Singh</a>
+    </div>
+  </div>
+</nav>
+</body>
+</html>
