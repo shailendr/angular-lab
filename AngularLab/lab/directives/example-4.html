@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Directive Comments Example - 4</title>
+	<link rel="stylesheet" href="../../lib/bootstrap/bootstrap.min.css">
+  	<link rel="stylesheet" href="../../css/app.css">
+	<link rel="stylesheet" href="../../css/bootstrap-theme.css">
+
+	<script type="text/javascript" src="../../lib/angular/angular.js"></script>
+</head>
+<body>
+
+	<div ng-app="myApp">
+		<!-- directive: hello-world -->
+	</div>
+
+	<script>
+	/*
+		In addition to
+
+
+	*/
+		var app = angular.module("myApp", []);
+		app.directive("helloWorld", function() {
+		    return {
+		    	restrict : "M",
+		    	replace : true,
+		    	template : "<h1>Directive Commects Hello World...</h1>"
+		    }
+		});
+
+	</script>
+
+</body>
+</html>

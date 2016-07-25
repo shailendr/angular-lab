@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Directive Class Example - 3</title>
+	<link rel="stylesheet" href="../../lib/bootstrap/bootstrap.min.css">
+  	<link rel="stylesheet" href="../../css/app.css">
+	<link rel="stylesheet" href="../../css/bootstrap-theme.css">
+
+	<script type="text/javascript" src="../../lib/angular/angular.js"></script>
+</head>
+<body>
+
+	<div ng-app="myApp">
+		<div class="hello-world"></div>
+	</div>
+
+	<script>
+	/*
+		In addition to
+
+
+	*/
+		var app = angular.module("myApp", []);
+		app.directive("helloWorld", function() {
+		    return {
+		    	restrict : "C",
+		    	template : "<h1>Directive Class Hello World...</h1>"
+		    }
+		});
+
+	</script>
+
+</body>
+</html>

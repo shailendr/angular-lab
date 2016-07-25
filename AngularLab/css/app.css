@@ -5,6 +5,9 @@ html{
     min-height: 100%;
 }
 
+.error{
+    color: #DC136C;
+}
 .footer {
   position: absolute;
   bottom: 0;

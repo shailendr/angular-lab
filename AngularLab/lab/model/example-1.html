@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example - 1</title>
+	<link rel="stylesheet" href="../../lib/bootstrap/bootstrap.min.css">
+  	<link rel="stylesheet" href="../../css/app.css">
+	<link rel="stylesheet" href="../../css/bootstrap-theme.css">
+
+	<script type="text/javascript" src="../../lib/angular/angular.js"></script>
+</head>
+<body>
+
+	<div ng-app="myApp">
+		<div ng-controller="Ctrl">
+		Name : <input ng-model="firstName" /><br/>
+		<span>Welcome : {{firstName}} </span>
+		</div>
+	</div>
+
+	<script>
+
+		var app = angular.module("myApp", []);
+		app.controller("Ctrl", function($scope) {
+		    $scope.firstName = "Dev";
+		});
+
+	</script>
+
+</body>
+</html>

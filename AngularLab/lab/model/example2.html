@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example - 2</title>
+	<link rel="stylesheet" href="../../lib/bootstrap/bootstrap.min.css">
+  	<link rel="stylesheet" href="../../css/app.css">
+	<link rel="stylesheet" href="../../css/bootstrap-theme.css">
+
+	<script type="text/javascript" src="../../lib/angular/angular.js"></script>
+</head>
+<body>
+
+	<div ng-app="myApp">
+		<div ng-controller="Ctrl">
+			<form name="form">
+			    Email:
+			    <input type="email" name="myAddress" ng-model="email" required>
+			    <span ng-show="form.myAddress.$error.email">Not a valid e-mail address</span>
+			</form>
+		</div>
+	</div>
+
+	<script>
+
+		var app = angular.module("myApp", []);
+		app.controller("Ctrl", function($scope) {
+		    $scope.email = "abc@abc.com";
+		});
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Directive Example - 2</title>
+	<link rel="stylesheet" href="../../lib/bootstrap/bootstrap.min.css">
+  	<link rel="stylesheet" href="../../css/app.css">
+	<link rel="stylesheet" href="../../css/bootstrap-theme.css">
+
+	<script type="text/javascript" src="../../lib/angular/angular.js"></script>
+</head>
+<body>
+
+	<div ng-app="myApp">
+		<div hello-world></div>
+	</div>
+
+	<script>
+	/*
+		In addition to
+
+
+	*/
+		var app = angular.module("myApp", []);
+		app.directive("helloWorld", function() {
+		    return {
+		    	restrict : "A",
+		    	template : "<h1>Directive Attribute Hello World...</h1>"
+		    }
+		});
+
+	</script>
+
+</body>
+</html>
