@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="../../css/app.css">
 	<link rel="stylesheet" href="../../css/bootstrap-theme.css">
   <script type="text/javascript" src="../../lib/angular/angular.js"></script>
+  <script type="text/javascript" src="../../lib/angular/angular-route.js"></script>
   <script type="text/javascript" src="app.js"></script>
 
 </head>
@@ -13,10 +14,14 @@
 <div  ng-app="teamApp">
   <header></header>  
     
-  <div class="container" style="margin:75px;" ng-controller="teamAppCtrl">
-    <div ng-show="!isLogin">
-      <login></login>
-    </div>    
+<!--   <div class="container" style="margin:75px;" ng-controller="teamAppCtrl">
+  <div ng-show="!isLogin">
+    <login></login>
+  </div>
+</div> -->
+
+  <div class="container" style="margin:75px;">
+    <div ng-view></div>
   </div>
 
   <!-- Footer -->

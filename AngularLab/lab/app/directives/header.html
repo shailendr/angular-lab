@@ -13,13 +13,13 @@
         <li><a href="#"></a></li>
         <li><a href="#"></a></li>
         <li><a href="#"></a></li>
-        <li class="{{activeTeam}}"><a href="#">Team</a></li>
-        <li><a href="#">Tasks</a></li>
-        <li><a href="#">About</a></li>
+        <li class="{{activeTeam}}"><a href="#team">Team</a></li>
+        <li><a href="#tasks">Tasks</a></li>
+        <li><a href="#about">About</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right" ng-show="!isLogin">
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="#login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
   </div>
