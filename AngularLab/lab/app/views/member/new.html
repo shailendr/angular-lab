@@ -1,0 +1,95 @@
+<div class="container" ng-submit="newMember()" ng-controller="memberCtrl">
+    <span>
+        <h3>New Member</h3>
+    </span>
+    <hr>
+    <form name="newMemberForm">
+        <div class="member">
+            <div class="row">
+                <div class="col-md-2">
+                    First Name:
+                </div>
+                <div class="col-md-10">
+                    <input type="text" name="firstName" class="form-control" required ng-model="newUser.firstName"  />
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-2">
+                    Last Name:
+                </div>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" ng-model="newUser.lastName" ng-model="lastName" />
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                    <div class="col-md-2">
+                        Gender:
+                    </div>
+                    <div class="col-md-10">
+                        <div class="radio">
+                            <label class="radio">
+                                <input type="radio" name="gender" value="Male" />
+                                Male
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label class="radio">
+                                <input type="radio" name="gender" value="Female"/>
+                                Female
+                                <br />
+                            </label>
+                        </div>
+                    </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-2">
+                    Email:
+                </div>
+                <div class="col-md-10">
+                    <input type="text" name="email" required ng-model="newUser.email"  class="form-control"/>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-2">
+                    Address:
+                </div>
+                <div class="col-md-10">
+                    <input type="text" name="address" required ng-model="newUser.address" class="form-control" />
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-2">
+                    City:
+                </div>
+                <div class="col-md-10">
+                    <input type="text" name="city" required ng-model="newUser.city" class="form-control" />
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-2">
+                    State:
+                </div>
+                <div class="col-md-10">
+                    <select name="state" required  ng-model="newUser.state" class="form-control" >
+                        <option value="UP">UP</option>
+                    </select>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary">
+                        Add
+                    </button>
+                </div>
+            </div>
+            <br />
+        </div>
+    </form>
+</div>

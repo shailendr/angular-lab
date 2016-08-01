@@ -100,7 +100,9 @@ html{
 }
 
 .login input[type='email'],
-.login input[type='password'] {
+.member input[type='text'],
+.login input[type='password'] ,
+select.form-control{
     width:300px;
 }
 

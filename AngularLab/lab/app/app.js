@@ -1,5 +1,22 @@
 var app = angular.module("teamApp", ["ngRoute"]);
+var members = [
+				{
+				 "firstName" : "Shailendra",
+				 "lastName"  : "Singh",
+				 "email"     : "Shailendra.singh@email.com",
+				 "address"   : "Hinjewadi",
+				 "city"		 : "Pune",
+				 "state"     : "Maharastra",
+				 "avatar"	 : "../../assets/images/male.png",
+				 "task"		 : "2"	
+				}
+			];
 
+var users = [{email:'admin@admin.com', password:'admin123' }];
+
+/*
+	routes
+*/
 app.config(function($routeProvider){
 	$routeProvider
 	.when("/",{
@@ -13,9 +30,17 @@ app.config(function($routeProvider){
 	.when("/team",{
 		templateUrl : "views/team/members.html",
 		controller : "teamCtrl"
-	});
+	})
+	.when("/member",{
+		templateUrl : "views/member/new.html",
+		controller : "memberCtrl"
+	})
+	;
 });
 
+/*
+	directive
+*/
 app.directive("header", function() {
     return {
       restrict : "E",
@@ -44,27 +69,44 @@ app.directive("task", function() {
     }
 });
 
+/*
+	Controllers
+*/
 app.controller('teamAppCtrl',function($scope, $rootScope){
     $rootScope.isLogin = false;
     $rootScope.view= "login";
     $rootScope.activeTeam = "";
 });
 
-var members = [
-				{
-				 "firstName" : "Shailendra",
-				 "lastName"  : "Singh",
-				 "address"   : "Pune, Maharastra",
-				 "avatar"	 : "../../assets/images/male.png",
-				 "task"		 : "2"	
-				}
-			];
+app.controller('memberCtrl',function($scope, $rootScope, $location){
+    $scope.newUser = {
+    	    "firstName" : "dev",
+		    "lastName" : "singh",
+		    "email" : "dev@email.com",
+		    "address" : "wakad",
+		    "city" : "Pune",
+		    "state" : "Maharastra",
+	    	"avatar"	 : "../../assets/images/male.png",
+			"task"		 : "0"	
+    };
 
-app.controller('teamCtrl',function($scope, $rootScope){
-    $scope.members = members; 
+	$scope.newMember = function(){
+		members.push($scope.newUser);
+		$rootScope.isLogin = true;
+    	$rootScope.activeTeam = "active";
+		$location.path('/team');
+    };
+
 });
 
-var users = [{email:'admin@admin.com', password:'admin123' }];
+app.controller('teamCtrl',function($scope, $rootScope, $location){
+    var _this = this;
+    $scope.addMember = function(){
+    	$rootScope.activeTeam = "active";
+    	$location.path('/member');
+    };
+    $scope.members = members; 
+});
 
 app.controller('loginCtrl',function($scope, $rootScope, $location){
 	$scope.email="";

@@ -9,7 +9,7 @@
                     Email:
                 </div>
                 <div class="col-md-11">
-                    <input type="email" name="myEmail" class="form-control" ng-model="email" required />
+                    <input type="email" required name="myEmail" class="form-control" ng-model="email" />
                     <span class="error" ng-show="loginForm.myEmail.$error.email">Not a valid e-mail address</span>
                     <!--div class="error" ng-show="loginForm.myEmail.$error.required">
         Field required</div-->
@@ -21,7 +21,7 @@
                     Password:
                 </div>
                 <div class="col-md-11">
-                    <input type="password" name="myPassword" class="form-control" ng-model="password" required />                   
+                    <input type="password" required name="myPassword" class="form-control" ng-model="password" />                   
                 </div>
             </div>
             <br />

@@ -8,11 +8,10 @@
             <div class="col-md-10">
                 <div class="navbar">
                     <ul class="nav navbar-nav">
-                        <li class="toolbaritem">
-                                
-                                <button type="button" class="btn btn-success">
-                        			<span class="glyphicon glyphicon-plus"></span> Add Team Member
-                    			</button>
+                        <li class="toolbaritem">                                
+                            <button type="button" class="btn btn-success" ng-click="addMember()">
+                    			<span class="glyphicon glyphicon-plus"></span> Add Team Member
+                			</button>
                         </li>
                     </ul>
                     <form class="navbar-form navbar-right">
@@ -26,7 +25,6 @@
                 </div>
             </div>
         </div>
-
         <div class="container">
 			<div class="row gridContainer membersTable show-hide-animation">
                 <div class="col-md-10">
@@ -38,14 +36,14 @@
                                     <th>Name</th>
                                     <th>Location</th>
                                     <th>Task</th>
-                                    <th>&nbsp;</th>
+                                    <th>Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr ng-repeat="user in members">
                                     <td><a href="#"><img ng-src="{{user.avatar}}" class="cardImage" alt="Customer Image" /></a></td>
                                     <td><a href="#">{{user.firstName}} {{user.lastName}}</a></td>
-                                    <td>{{user.address}}</td>
+                                    <td>{{user.city}} {{user.state}}</td>
                                     <td>
                                         <a href="#" class="btn-link">
                                             {{user.task}}
