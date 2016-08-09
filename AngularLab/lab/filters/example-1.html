@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Filter</title>
+	<link rel="stylesheet" href="../../lib/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../css/app.css">
+	<link rel="stylesheet" href="../../css/bootstrap-theme.css">
+  <script type="text/javascript" src="../../lib/angular/angular.js"></script>
+  <script type="text/javascript" src="../../lib/angular/angular-route.js"></script>
+
+</head>
+<body>
+<div  ng-app="app" ng-controller="Ctrl">
+    <span> Filtered Msg is {{msg | uppercase}}</span>
+    
+</div>
+<script type="text/javascript">
+  /*
+    Filters can be added to expressions by using the pipe 
+    character | , followed by filter.
+
+    Angular JS provides filters to transform data:
+
+    currency ---> Format a number to a currency format.
+    date ---> Format a date to a specified format.
+    filter ---> Select a subset of items from an array.
+    json ---> Format an object to a JSON string.
+    limitTo ---> Limits an array/string, into a specified number of elements/characters.
+    lowercase ---> Format a string to lower case.
+    number ---> Format a number to a string.
+    orderBy ---> Orders an array by an expression.
+    uppercase ---> Format a string to upper case.
+
+
+  */
+
+    var app = angular.module("app", []);
+    app.controller("Ctrl", function($scope) {
+        $scope.msg = "Hello Wo#rld";
+    });
+
+
+
+</script>
+
+</body>
+</html>
